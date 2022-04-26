@@ -1,0 +1,51 @@
+{
+  "revision_id": "8160f14cf47f84afb75279dd4a27405ca30bfec8496b6afe4c0703dd214a8ede",
+  "name": "log_upload",
+  "run_list": [
+    "recipe[log_upload::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "log_upload": {
+      "version": "0.1.0",
+      "identifier": "587f6e2fbcdd8c4e8294e8afa78dcd3cf6356e50",
+      "dotted_decimal_identifier": "24909909174574476.22098624254027661.225661712428624",
+      "source": ".",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": null,
+        "revision": "fd36dba86fa10407e279a5d2a3974d261a2befb2",
+        "working_tree_clean": false,
+        "published": false,
+        "synchronized_remote_branches": [
+
+        ]
+      },
+      "source_options": {
+        "path": "."
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "log_upload",
+        ">= 0.0.0"
+      ]
+    ],
+    "dependencies": {
+      "log_upload (0.1.0)": [
+
+      ]
+    }
+  }
+}
