@@ -16,3 +16,24 @@ bash 'name' do
     EOH
     action :run
 end
+
+
+# new curl reference
+
+
+bash 'upload file' do
+    cwd '/tmp'
+    code <<-EOH
+    curl -H 'PRIVATE-TOKEN: ****' \
+    -H "Content-Type: application/json" \
+    -d '{
+       "branch": "master", 
+       "author_email": "johndoe@gmail.com", 
+       "author_name": "John Doe",
+       "content": '"$(jq -Rs '.' upload)"', 
+       "commit_message": "create a new file"
+    }' "https://gitlab.com/api/v4/projects/26197037/repository/files/upload"
+    EOH
+    user 'root'
+    action :run
+end
