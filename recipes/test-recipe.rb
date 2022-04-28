@@ -18,6 +18,19 @@ bash 'name' do
 end
 
 
+# download aws file 
+
+bash 'aws download' do
+    code <<-EOH
+    /usr/local/bin/aws s3 cp  s3://gitlabtest12345/upload /tmp/downloaded
+    EOH
+    action :run
+    user 'root'
+end
+
+
+
+
 # new curl reference
 
 
